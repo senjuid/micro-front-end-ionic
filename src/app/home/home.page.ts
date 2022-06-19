@@ -27,4 +27,12 @@ export class HomePage {
     window['cache'].clear()
   }
 
+  openCamera() {
+
+  }
+
+  getNative() {
+    
+  }
+
 }

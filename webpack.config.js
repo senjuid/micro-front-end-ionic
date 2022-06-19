@@ -33,12 +33,19 @@ module.exports = {
       // filename: "remoteEntry.js",
       // exposes: {
       //     './Component': './/src/app/app.component.ts',
-      // },        
+      // },    
+      
+      name: "app",
+        filename: "remoteEntry.js",
+        exposes: {
+            './MicroFrontEndModule': './/src/app/microfrontend.module.ts',
+        },        
+
 
       // For hosts (please adjust)
-      remotes: {
-        "angular13": "https://dzurrahman.github.io/mfe-roki-test/remoteEntry.js",
-      },
+      // remotes: {
+      //   "angular13": "https://dzurrahman.github.io/mfe-roki-test/remoteEntry.js",
+      // },
 
       shared: share({
         "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
