@@ -9,7 +9,9 @@ export class HomePage {
 
   constructor(
     private router: Router
-  ) {}
+  ) {
+    console.log('HALO 123');
+  }
 
   goToRemote() {
     this.router
@@ -32,7 +34,7 @@ export class HomePage {
   }
 
   getNative() {
-    
+
   }
 
 }
