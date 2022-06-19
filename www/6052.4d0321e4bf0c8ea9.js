@@ -1,0 +1,1 @@
+(self.webpackChunkapp=self.webpackChunkapp||[]).push([[6052],{6052:(d,o,n)=>{n.r(o),n.d(o,{Storage:()=>a});const a=(0,n(7423).fo)("Storage",{web:()=>n.e(8913).then(n.bind(n,8913)).then(h=>new h.StorageWeb)})}}]);

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Camera, CameraResultType } from '@capacitor/camera';
 import { Authentication } from '@core/authentication/authentication';
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ export class HomePage {
 
   async loadAuth() {
     try {
-      await this.authentication.getAuth();
+      await this.authentication.loadAuth();
       this.token = this.authentication.token;
     } catch (error) {
       
@@ -42,12 +43,12 @@ export class HomePage {
     window['cache'].clear()
   }
 
-  openCamera() {
-
-  }
-
-  getNative() {
-
+  async openCamera() {
+    await Camera.getPhoto({
+      quality: 90,
+      allowEditing: true,
+      resultType: CameraResultType.Uri
+    });
   }
 
 }

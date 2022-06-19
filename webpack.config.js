@@ -52,6 +52,7 @@ module.exports = {
         "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
         "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
         "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@capacitor/storage": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
 
         ...sharedMappings.getDescriptors()
       })
