@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Authentication } from '@core/authentication/authentication';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,10 +8,22 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
+  public token;
+
   constructor(
-    private router: Router
+    private router: Router,
+    private authentication: Authentication,
   ) {
-    console.log('HALO 123');
+    this.loadAuth();
+  }
+
+  async loadAuth() {
+    try {
+      await this.authentication.getAuth();
+      this.token = this.authentication.token;
+    } catch (error) {
+      
+    }
   }
 
   goToRemote() {
