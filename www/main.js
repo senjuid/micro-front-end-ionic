@@ -1,42 +1,14 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ 1195:
-/*!***********************!*\
-  !*** container entry ***!
-  \***********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4431:
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-var moduleMap = {
-	"./MicroFrontEndModule": () => {
-		return __webpack_require__.e("src_app_microfrontend_module_ts-_06460").then(() => (() => ((__webpack_require__(/*! .//src/app/microfrontend.module.ts */ 9594)))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope) => {
-	if (!__webpack_require__.S) return;
-	var name = "default"
-	var oldScope = __webpack_require__.S[name];
-	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
-	__webpack_require__.S[name] = shareScope;
-	return __webpack_require__.I(name, initScope);
-};
+__webpack_require__.e(/*! import() */ "src_bootstrap_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ 5533))
+    .catch(err => console.error(err));
 
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
 
 /***/ })
 
@@ -440,22 +412,23 @@ __webpack_require__.d(exports, {
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
 /******/ 		1722: () => (loadSingletonVersionCheckFallback("default", "@angular/core", [2,13,3,0], () => (__webpack_require__.e("node_modules_angular_core_fesm2020_core_mjs").then(() => (() => (__webpack_require__(/*! @angular/core */ 2560))))))),
-/******/ 		7936: () => (loadSingletonVersionCheckFallback("default", "@angular/common", [2,13,3,0], () => (__webpack_require__.e("node_modules_angular_common_fesm2020_common_mjs-_ec491").then(() => (() => (__webpack_require__(/*! @angular/common */ 4666))))))),
 /******/ 		7447: () => (loadSingletonVersionCheckFallback("default", "@angular/router", [2,13,3,0], () => (__webpack_require__.e("node_modules_angular_router_fesm2020_router_mjs-_6f000").then(() => (() => (__webpack_require__(/*! @angular/router */ 124))))))),
+/******/ 		7936: () => (loadSingletonVersionCheckFallback("default", "@angular/common", [2,13,3,0], () => (__webpack_require__.e("node_modules_angular_common_fesm2020_common_mjs-_ec491").then(() => (() => (__webpack_require__(/*! @angular/common */ 4666))))))),
 /******/ 		2468: () => (loadSingletonVersionCheckFallback("default", "@capacitor/storage", [4,1,2,4], () => (__webpack_require__.e("node_modules_capacitor_storage_dist_esm_index_js-_99ef0").then(() => (() => (__webpack_require__(/*! @capacitor/storage */ 460)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
+/******/ 		"src_bootstrap_ts": [
+/******/ 			1722,
+/******/ 			7447,
+/******/ 			7936
+/******/ 		],
 /******/ 		"node_modules_angular_common_fesm2020_common_mjs-_ec490": [
 /******/ 			1722
 /******/ 		],
 /******/ 		"node_modules_angular_router_fesm2020_router_mjs-_6f001": [
 /******/ 			7936,
 /******/ 			1722
-/******/ 		],
-/******/ 		"src_app_microfrontend_module_ts-_06460": [
-/******/ 			1722,
-/******/ 			7447
 /******/ 		],
 /******/ 		"node_modules_angular_router_fesm2020_router_mjs-_6f000": [
 /******/ 			7936
@@ -505,7 +478,7 @@ __webpack_require__.d(exports, {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"app": 0
+/******/ 		"main": 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -592,10 +565,7 @@ __webpack_require__.d(exports, {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(1195);
-/******/ var __webpack_exports__get = __webpack_exports__.get;
-/******/ var __webpack_exports__init = __webpack_exports__.init;
-/******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
+/******/ var __webpack_exports__ = __webpack_require__(4431);
 /******/ 
 
-//# sourceMappingURL=remoteEntry.js.map
+//# sourceMappingURL=main.js.map
